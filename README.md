@@ -27,4 +27,4 @@ If you use brouser IE10- add script classList from https://cdn.jsdelivr.net/clas
 <br>
 Pressing the Enter key is identical to OK button clicking.<br>
 Pressing the Escape key is identical to CANCEL button clicking.<br><br>
-http://mountain-programmer.ru/
+http://mountain-programmer.ru/alert-stylesed.html
