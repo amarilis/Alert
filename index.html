@@ -9,57 +9,43 @@
     <!--[if lt IE 10]><script src="https://cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js"></script><![endif]-->
 
 
-    <script type="text/javascript" src="alert-prototype.js"></script>
+    <script type="text/javascript" src="alert.js"></script>
 
   </head>
   <body>
-
-
 
     <div class="button"
       data-alert-title="Title"
       data-alert-content="Content stylesed alert"
       data-alert-cancel="yes"
       data-alert-ok-name="YES"
-      data-alert-after-function="alert('after')"
-      data-alert-ok-function="alert('ok')"
-      data-alert-cancel-function="alert('cancel')"
+      data-alert-after-function="alert('Click on close button stylesed alert!')"
+      data-alert-ok-function="alert('Click on OK button stylesed alert!')"
+      data-alert-cancel-function="alert('Click on CANCEL button stylesed alert!')"
       data-alert-cancel-name="NO">alert with attributes data-*</div>
     <br><br>
     <div class="button" data-alert-title="Error!!!" data-alert-content="Oh no! A mistake again." data-alert-type="error">alert error</div>
     <br><br>
     <div class="button" data-alert-title="Warning!" data-alert-content="Mind the character number." data-alert-type="warning">alert warning</div>
     <br><br>
-    <div id="" class="button" data-alert-title="data-alert-title" data-alert-content="data-alert-content" >alert с атрибутами data-*</div>
-    <br><br>
-    <div id="" class="button" data-alert-title="data-alert-title" data-alert-content="data-alert-content" >alert с атрибутами data-*</div>
-    <br><br>
-    <div id="" class="button" data-alert-title="data-alert-title" data-alert-content="data-alert-content" >alert с атрибутами data-*</div>
-    <br><br>
-    <div id="" class="button" data-alert-title="data-alert-title" data-alert-content="data-alert-content" >alert с атрибутами data-*</div>
-    <br><br>
-    <div id="" class="button" data-alert-title="data-alert-title" data-alert-content="data-alert-content" >alert с атрибутами data-*</div>
-    <br><br>
-    <div id="" class="button" data-alert-title="data-alert-title" data-alert-content="data-alert-content" >alert с атрибутами data-*</div>
-    <br><br>
 
-<script>
-  
-    var buttons = document.getElementsByClassName('button');
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function(){
-            var newAlert = new Alert(this);
-        });
-    };
+    <script>
+      (function(){
+        var buttons = document.getElementsByClassName('button');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function(){
+                var newAlert = new Alert(this);
+            });
+        };
 
-    setTimeout(function(){
-        var na = new Alert({
-            alertTitleText : 'aaa',
-            alertContentText : 'bbb'
-        });
-    },100);
-    
-</script>
+        setTimeout(function(){
+            var na = new Alert({
+                alertTitleText : 'aaa',
+                alertContentText : 'bbb'
+            });
+        },100);
+      }());
+    </script>
 
   </body>
 </html>

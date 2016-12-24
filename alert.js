@@ -23,6 +23,11 @@
  * Using javascript object new Alert({...}) you should use the same name, in camelCase only.
  *
  * If you use brouser IE10- add script classList from https://cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js
+ *
+ * Pressing the Enter key is identical to OK button clicking.
+ * Pressing the Escape key is identical to CANCEL button clicking.
+ *
+ * http://mountain-programmer.ru/
  */
 "use strict"
 function Alert(obj) {
@@ -128,6 +133,9 @@ Alert.prototype.createAlert = function(){console.log();
     document.body.appendChild(this.alertOverlay);
     document.body.appendChild(this.alertBlock);
 
+    // press Enter key or Escape key
+    this.enterKey(this);
+
 };
 Alert.prototype.showAlert = function(){
     
@@ -136,6 +144,7 @@ Alert.prototype.showAlert = function(){
     // show
     this.alertOverlay.classList.add("showAlert");
     this.alertBlock.classList.add("showAlert");
+
 
 };
 Alert.prototype.hideAlert = function(func){
@@ -151,4 +160,14 @@ Alert.prototype.hideAlert = function(func){
     // function after click
     (new Function('', func)());
 
+};
+
+Alert.prototype.enterKey = function(self){
+    document.addEventListener('keydown',function(e) {
+        var el = document.getElementById(self.alertBlock.getAttribute('id'));
+        if (!!el) {
+            if ( e.keyCode === 13 )  self.hideAlert(self.alertOkFunction);
+            if ( e.keyCode === 27 )  self.hideAlert(self.alertAfterFunction);
+        };
+    });
 };
