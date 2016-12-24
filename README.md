@@ -23,4 +23,8 @@ data-alert-type - is content type: either simple or error or warning (''|error|w
 <br>
 Using javascript object new Alert({...}) you should use the same name, in camelCase only.<br>
 <br>
-If you use brouser IE10- add script classList from https://cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js
+If you use brouser IE10- add script classList from https://cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js<br>
+<br>
+Pressing the Enter key is identical to OK button clicking.<br>
+Pressing the Escape key is identical to CANCEL button clicking.<br><br>
+http://mountain-programmer.ru/

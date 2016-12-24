@@ -26,7 +26,7 @@
  *
  * Pressing the Enter key is identical to OK button clicking.
  * Pressing the Escape key is identical to CANCEL button clicking.
- *
+ * 
  * http://mountain-programmer.ru/
  */
 "use strict"
