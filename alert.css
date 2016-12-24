@@ -1,0 +1,158 @@
+/* Buttons */
+.button{
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial;
+    margin: 0 3px;
+    background: #9b9b9b; /* Old browsers */
+    background: -moz-linear-gradient(top, #9b9b9b 0%, #e2e2e2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #9b9b9b 0%,#e2e2e2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #9b9b9b 0%,#e2e2e2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b9b9b', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+}
+.button:hover,
+.button:active{
+    color: #000;
+    background: #76ab3b; /* Old browsers */
+    background: -moz-linear-gradient(top,  #76ab3b 0%, #abde62 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #76ab3b 0%,#abde62 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #76ab3b 0%,#abde62 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76ab3b', endColorstr='#abde62',GradientType=0 ); /* IE6-9 */
+}
+/* Overlay block*/
+.alertOverlay{
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0px;
+    top:0px;
+    z-index:55;
+    background:#333;
+    opacity:.7;
+    display: none;
+}
+/* Stylesed Alert*/
+.alertBlock{
+    min-width:250px;
+    max-width: 850px;
+    background:#fff;
+    position:fixed;
+    left:50%;
+    top:50%;
+    z-index:56;
+    text-align: left;
+    display:none;
+}
+/* show|hide Alert */
+.showAlert{
+    display: block;
+}
+/* Title in Alert */
+.alertTitle{
+    padding:0px 15px;
+    height: 30px;
+    line-height: 30px;
+    background: #f0f0f0; /* Old browsers */
+    background: -moz-linear-gradient(top, #f0f0f0 0%, #c8d0d2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f0f0f0 0%,#c8d0d2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f0f0f0 0%,#c8d0d2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#c8d0d2',GradientType=0 ); /* IE6-9 */
+}
+/* Content in Alert */
+.alertContent{
+    padding:10px 15px 5px 15px;
+    color:#333;
+    font-size:12px;
+    font-family: Arial;
+}
+/* Type content: error | warning */
+.alertContentType{
+    padding:10px 15px 5px 60px;
+    position: relative;
+}
+/* Type content */
+.alertType{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 25px;
+}
+/* Type content error */
+.alert_error{
+    border-radius: 20px;
+    background: red;
+    color: #ffffff;
+    line-height: 40px;
+}
+.alert_error::after{
+    content: '\2716';
+}
+/* Type content warning */
+.alert_warning{
+    width: 40px;
+    height: 40px;
+}
+.alert_warning::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 40px 20px;
+    border-color: transparent transparent #ffff00 transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.alert_warning::after{
+    content: '!';
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    left: 1px;
+    top: 0;
+}
+/* Block with buttons */
+.alertButtons{
+    padding: 10px 0;
+    text-align: center;
+}
+/* Link in cintent Alert */
+.alertContent a{
+    color:#333;
+}
+.alertContent a:hover,
+.alertContent a:active{
+    text-decoration:none;
+    color:#ed1e79;
+}
+/* Button close */
+.alertClose{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    background: transparent;
+}
+.alertClose::after{
+    content: '\2716';
+}
+.alertClose:hover::after {
+    color:#ff0000;
+}
