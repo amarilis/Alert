@@ -3,9 +3,11 @@ Alert - is a replacement of alert() with your own styles.
 @obj - HTML element with attributes data-* or javascript object.
 
 if use HTML element you should use:
+<br>
 &lt;div data-alert-title="title" data-alert-content="content" onclick="new Alert(this)"&gt;&lt;/div&gt;;
 
 if use javascript object you should use:
+<br>
 new Alert({alertTitleText : 'title',alertContentText : 'content'});
 
 data-alert-title - is a title
