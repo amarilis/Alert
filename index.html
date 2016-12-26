@@ -14,38 +14,23 @@
   </head>
   <body>
 
-    <div class="button"
-      data-alert-title="Title"
-      data-alert-content="Content stylesed alert"
-      data-alert-cancel="yes"
-      data-alert-ok-name="YES"
-      data-alert-after-function="alert('Click on close button stylesed alert!')"
-      data-alert-ok-function="alert('Click on OK button stylesed alert!')"
-      data-alert-cancel-function="alert('Click on CANCEL button stylesed alert!')"
-      data-alert-cancel-name="NO">alert with attributes data-*</div>
+    <div class="button" data-alert-title="Title" data-alert-content="Content stylesed alert" data-alert-cancel="yes" data-alert-ok-name="YES" data-alert-after-function="alert('Click on close button stylesed alert!')" data-alert-ok-function="alert('Click on OK button stylesed alert!')" data-alert-cancel-function="alert('Click on CANCEL button stylesed alert!')" data-alert-cancel-name="NO">alert with attributes data-*</div>
     <br><br>
     <div class="button" data-alert-title="Error!!!" data-alert-content="Oh no! A mistake again." data-alert-type="error">alert error</div>
     <br> <br>
     <div class="button" data-alert-title="Warning!" data-alert-content="Mind the character number." data-alert-type="warning">alert warning</div>
     <br><br>
 
-    <script>
-      (function(){
-        var buttons = document.getElementsByClassName('button');
-        for (var i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener('click', function(){
-                var newAlert = new Alert(this);
-            });
-        };
-
-        setTimeout(function(){
-            var na = new Alert({
-                alertTitleText : 'aaa',
-                alertContentText : 'bbb'
-            });
-        },100);
-      }());
-    </script>
+<script>
+(function(){
+  var buttons = document.getElementsByClassName('button');
+  for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function(){
+          var newAlert = new Alert(this);
+      });
+  };
+}());
+</script>
 
   </body>
 </html>

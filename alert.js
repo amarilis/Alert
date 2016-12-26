@@ -164,6 +164,7 @@ Alert.prototype.hideAlert = function(func){
 
 Alert.prototype.enterKey = function(self){
     document.addEventListener('keydown',function(e) {
+        e = e || window.event;
         var el = document.getElementById(self.alertBlock.getAttribute('id'));
         if (!!el) {
             if ( e.keyCode === 13 )  self.hideAlert(self.alertOkFunction);
